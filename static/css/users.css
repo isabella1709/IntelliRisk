@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+body{
+    margin: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 8%;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #F6D46B;
+}
+
+.icone_logo {
+    height: 100%;
+}
+
+.inicio, .projeto, .pesquisa, .sensores, .atuadores, .interacao, .login, .users, .comando,.dado,.atuacao,.sair{
+    padding: 30px;
+}
+
+
+.navbar a{
+    float: right;
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    transition: transform 0.3s ease; 
+}
+
+.navbar a:hover{
+    transform: scale(1.05);
+}
+
+.page{
+    height: 100%;
+    width: 100%;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F7EE;
+
+}
+
+.table{
+    width: 80%;
+    border: solid black 2px;
+}
+
+th{
+    text-align: center;
+    border: solid 2px black;
+
+}
+
+td{
+    text-align: center;
+    border: solid 2px black;
+}
+
+.tittle{
+    background-color: #f8bdc6;
+}
+
+.tittle-tabela{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    width: 260px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+    text-align: center;
+    cursor: pointer;
+}
+
+.button:hover{
+    transform: scale(1.05);
+}
+
+.controlador{
+    height: 200px;
+    border: solid 2px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-led{
+    padding-top: 10px;
+    padding-right: 10px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.top{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.top img{
+    height: 60px;
+    width: 70px;
+    padding-bottom: 5px;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+

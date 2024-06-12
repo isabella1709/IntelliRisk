@@ -1,0 +1,38 @@
+{% extends"base_sensors_atuadores.html" %}
+{% block content %}
+
+<div class="page">    
+    <div class="tittle-tabela">Sensores</div>
+    <table class="table">
+        <tr class="tittle">
+            <th scope="col">Sensor</th>
+            <th scope="col">Localização</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Tópico</th>
+            <th scope="col">Unidade</th>
+            <th scope="col">Status</th>
+          </tr>
+        
+      {% for sensor in devices %}
+      <tbody>
+          <tr>
+            <td>{{ sensor.name }}</td>
+            <td>{{ sensor.localizacao }}</td>
+            <td>{{ sensor.brand }}</td>
+            <td>{{ sensor.model }}</td>
+            <td>{{ sensor.topic }}</td> 
+            <td>{{ sensor.unit }}</td>
+            {% if sensor.is_active == true %}
+                <td>Ativo</td>
+            {% else %}
+                <td>Desativado</td>
+            {% endif %}
+            </tr>
+      </tbody>
+      {% endfor %}
+    </table>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+<!-- 
+    Tela para visualização dos dados em Tempo Real (todos usuários tem acesso) coletados via MQTT Flask oriundos de uma aplicação do RA1, sendo por sistema físico (ESP32 por exemplo) ou via Wokwi;
+Tela para comandos remotos (todos usuários tem acesso) utilizando Flask mqtt para publicar na aplicação em ESP32 ou Wokwi;
+-->
+{% extends"base_usuarios.html" %}
+{% block content %}
+<body>
+    <div class="first-page">
+        <div class="body-left-first">
+            <div class="top">
+                <div class="text-top">
+                    <div>Bem-vindo, usuário!</div>
+                </div>
+            </div>
+            
+            <div class="middle">
+                <div class="text-middle">Vizualização em tempo real dos sensores e atuadores. Aqui na área do usuário, 
+                    você pode visualizar os sensores e atuadores cadastrados
+                    do <a>Intellirisk</a>!
+                </div>
+            </div>
+        </div>
+        <div class="body-right-first">
+            <div class="img-left"><img src="../static/img/searcher.png"></div>
+
+        </div>
+    </div>
+    
+</body>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends"base_sensors_atuadores.html" %}
+
+{% block content %}
+
+<div class="page">    
+    <div class="tittle-tabela">Atuadores</div>
+    <table class="table">
+        <tr class="tittle">
+            <th scope="col">Atuador</th>
+            <th scope="col">Localização</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Tópico</th>
+            <th scope="col">Unidade</th>
+            <th scope="col">Status</th>
+          </tr>
+        
+      {% for actuator in devices %}
+      <tbody>
+          <tr>
+            <td>{{ actuator.name }}</td>
+            <td>{{ actuator.localizacao }}</td>
+            <td>{{ actuator.brand }}</td>
+            <td>{{ actuator.model }}</td>
+            <td>{{ actuator.topic }}</td> 
+            <td>{{ actuator.unit }}</td>
+            {% if actuator.is_active == true %}
+                <td>Ativo</td>
+            {% else %}
+                <td>Desativado</td>
+            {% endif %}
+      </tbody>
+      {% endfor %}
+    </table>
+
+</div>
+
+{% endblock %}

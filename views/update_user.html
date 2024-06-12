@@ -1,0 +1,36 @@
+{% extends "base_login.html" %}
+{% block content %}
+
+    <h1>Editar Usuário</h1>
+    {%for user in users%}
+        <form action = "http://localhost:8080/update_user" method = "post">
+            <div class="total">
+                <p>Nome:</p>
+                <div class = "caixa">
+                    <p><input type = "text" name = "username" value= "{{user.username}}" required/></p>
+                </div>         
+                <p>E-mail:</p>
+                <div class = "caixa">
+                    <p><input type = "text" name = "email" value= "{{user.email}}" readonly /></p>
+                </div>               
+                <p>Senha:</p>
+                <div class = "caixa">
+                    <p><input type = "text" name = "password" placeholder="*********" required/></p>
+                </div>               
+                <p>Função:</p>
+                <div class = "caixa">
+                    <select name="role_type_" class="Input">
+                                    {% for role in role %}
+                                        <option>{{role.name}}</option>
+                                    {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div></div>
+            <div class="botao">
+                <p><input type="submit" value = "Alterar" class="botao" /></p>
+            </div>
+        </form>
+    {%endfor%}
+            
+{% endblock %}

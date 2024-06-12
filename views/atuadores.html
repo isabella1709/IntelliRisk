@@ -1,0 +1,56 @@
+{% extends"base_adm.html" %}
+{% block content%}
+<div class="page">
+    {% if devices|length> 0 %}
+    <table id="view_users" class="table table-striped" style="width:100%">
+        <div class="tittle-tabela">Controle de atuadores</div>
+        
+        <thead>
+            <tr>
+                <th>Sensor</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Tópico</th>
+                <th>Unidade</th>
+                <th>Bairro</th>
+                <th>Status</th>
+                <th>Editar</th>
+                <th>Deletar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for actuator in devices %}
+                <tr>
+                    <td>{{ actuator.name }}</td>
+                    <td>{{ actuator.brand }}</td>
+                    <td>{{ actuator.model }}</td>
+                    <td>{{ actuator.topic }}</td> 
+                    <td>{{ actuator.unit }}</td>
+                    <td>{{ actuator.localizacao }}</td>
+                    {% if actuator.is_active == true %}
+                        <td>Ativo</td>
+                    {% else %}
+                        <td>Desativado</td>
+                    {% endif %}
+                    <td><a href="http://localhost:8080/edit_actuator?id={{actuator.id}}">Editar</a></td>
+                    <td><a href="http://localhost:8080/del_actuator?id={{actuator.id}}">Deletar</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form action= "http://localhost:8080/register_atuadores">
+        <div class="botao">
+            <a><input type= "submit" value= "Adicionar Atuador"/></a>
+        </div>
+        </form>
+        {% else %}
+        <p>Ainda não há atuadores registrados!<p>
+    <form action= "http://localhost:8080/register_atuadores">
+    <div class="botao">
+        <p><input type= "submit" value= "Adicionar Atuador"/></p>
+    </div>
+    </form>
+    {% endif %}
+</div>
+
+{% endblock %}

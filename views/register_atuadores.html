@@ -1,0 +1,25 @@
+{% extends "base_login.html" %}
+{% block content %}
+
+            <h1>Cadastrar atuador</h1>
+
+                  <form action = "http://localhost:8080/add_actuator" method = "post"> 
+            <form>
+                <div class = "input">
+                    <input type = "text" name = "atuador" placeholder="Atuador" required/>
+                    <input type = "text" name = "localizacao" placeholder="Localização" required/>
+                    <input type = "text" name = "brand" placeholder="Marca" required/>
+                    <input type = "text" name = "model" placeholder="Modelo" required/>
+                    <input type = "text" name = "unit" placeholder="Unidade de Medida" required/>
+                    <input type = "text" name = "topic" placeholder="Tópico MQTT" required/>
+                </div>
+                <div>
+                    <input type="checkbox" id="is_active" name="is_active" checked />
+                    <label for="is_active">Ativo?</label>
+                </div>
+                <div class="botao">
+                    <p><input type="submit" value = "Cadastrar" class="botao" /></p>
+                </div>
+            </form>
+            
+{% endblock %}
