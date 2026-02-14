@@ -1,0 +1,26 @@
+{% extends "base_login.html" %}
+{% block content %}
+
+            <h1>Login</h1>
+
+                  <form action = "http://localhost:8080/validated_user" method = "post"> 
+            <form>
+                <div class = "input">
+                    <input type = "text" name = "email" placeholder="E-mail" required/>
+                    <input type = "password" name = "password" placeholder="Senha" required/>
+                </div>
+                <div class="botao">
+                    <p><input type="submit" value = "Entrar" class="botao" /></p>
+                </div>
+            </form>
+            <div class="column is-4 is-offset-4">
+                {% with messages = get_flashed_messages()%}
+                    {% if messages %}
+                        <p></p>
+                        <p class="whiteText">{{messages[0]}}</p>
+                        <p></p>
+                    {% endif%}
+                {%endwith%}
+            </div>
+
+{% endblock %}

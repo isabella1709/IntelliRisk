@@ -1,0 +1,59 @@
+<head>
+    <title>Página Usuários</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/css/users.css"/>
+</head>
+
+<header>
+    <div class="navbar">
+        <div class="inicio">
+            <a href="http://localhost:8080#first-page">Início</a>
+        </div>
+        <div class="pesquisa">
+            <a href="http://localhost:8080#second-page">Pesquisa</a>
+        </div>
+        <div class="projeto">
+            <a href="http://localhost:8080#third-page">IntelliRisk</a>
+        </div>
+        {% if roles == 1 %}
+            <div class="users">
+                <a href="http://localhost:8080/users">Usuários</a>
+            </div>
+            <div class="sensores">
+                <a href="http://localhost:8080/sensores">Sensores</a>
+            </div>
+            <div class="atuadores">
+                <a href="http://localhost:8080/atuadores">Atuadores</a>
+            </div>
+        {% endif %}
+
+        {% if roles == 1 or roles == 3 %}
+            <div class="comando">
+                <a href="/publish">Comando Remoto</a>
+            </div>
+            <div class="atuacao">
+                <a href="/history_write">Atuações Históricas</a>
+            </div>
+        {% endif %}
+
+        {% if roles == 1 or roles == 2 %}
+            <div class="dado">
+                <a href="/history_read">Dados Históricos</a>
+            </div>
+            <div class="interacao">
+                <a href="http://localhost:8080/tempo_real">Tempo Real</a>
+            </div>
+        {% endif %}
+        
+        <div class="dado">
+            <a href="/logoff">Sair</a>
+        </div>
+        
+    </div>
+    
+    {% block content %} {% endblock %}
+    
+</header>
+</html>

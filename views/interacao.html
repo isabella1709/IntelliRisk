@@ -1,0 +1,28 @@
+{% extends"base_interacao.html" %}
+{% block content %}
+
+<div class="page">    
+    <div class="tittle-tabela">Dados recebidos</div>
+    <table class="table">
+        <tr class="tittle">
+            <th scope="col">Risco de Dengue</th>
+            <th scope="col">Umidade</th>
+            <th scope="col">Temperatura</th>
+          </tr>
+        
+
+      <tbody>
+          <tr>
+              <td>{{ values.dengue1 }}</td>
+              <td>{{ values.dengue2 }}%</td>
+              <td>{{ values.dengue3 }}C°</td>
+            </tr>
+      </tbody>
+
+    </table>
+
+    
+
+</div>
+
+{% endblock %}

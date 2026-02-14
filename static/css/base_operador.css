@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+body{
+    margin: 0;
+    background-color: #F5F7EE;
+    padding-top: 5%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 8%;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #F6D46B;
+    z-index: 1;
+}
+
+.icone_logo {
+    height: 100%;
+}
+
+.inicio, .projeto, .pesquisa, .sensores, .atuadores, .interacao, .login, .users, .comando,.dado,.atuacao,.sair{
+    padding: 15px;
+}
+
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    transition: transform 0.3s ease; 
+}
+
+.navbar a:hover{
+    transform: scale(1.05);
+}
+
+.first-page{
+    background-color: #F5F7EE;
+    height: 100%;
+    display: flex;
+}
+
+.body-left-first{
+    padding-left: 3%;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.img-left img{
+    height: 500px;
+    width: 490px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.img-computer img{
+    height: 430px;
+    width: 470px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.body-right-first{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4%;
+    padding-top: 5%;
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+}
+
+.text-top{
+    padding-left: 4%;
+    font-size: 40px;
+    font-family: "Lato", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-middle a{
+    font-size: 30px;
+    font-family: "Lato", sans-serif;
+    font-weight: 800;
+}
+
+.middle{
+    padding-top: 20px;
+    padding-left: 4%;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+b{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 40px;
+    background-color: #F6D46B;;
+    padding: 25px;
+}
+
+tr{
+    border: 2px solid black;
+}
+
+th{
+    color: #F6D46B;
+    background-color: rgb(58, 56, 56);
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+
+td{
+    border: 2px solid black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    background-color: #F5F7EE;
+}
+
+.botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+
+.botao:hover{
+    transform: scale(1.05);
+}
+
+.botao input{
+    width: 260px;
+    height: 50px;
+    font-family: "Lato", sans-serif;
+    border-radius: 8px;
+    border: solid; 
+    border-color: black;
+    color: #F5F6EE;
+    background-color: black;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.botao-controle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+
+.botao-controle:hover{
+    transform: scale(1.05);
+}
+
+.botao-controle input{
+    width: 300px;
+    height: 60px;
+    font-family: "Lato", sans-serif;
+    border-radius: 8px;
+    border: solid; 
+    border-color: black;
+    color: #F6D46B;
+    background-color: black;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    width: 260px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+    text-align: center;
+}
+
+.button:hover{
+    transform: scale(1.05);
+}
+
+.controlador{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-led{
+    padding-top: 10px;
+    padding-right: 10px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+.inicio img{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.texto_inicio{
+    display: flex;
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.texto_inicio h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 40px;
+    padding: 25px;
+}
+
+.texto_inicio p{
+    font-size: 15px;
+}
+
+.page{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+    background-color: #F5F7EE;
+}
+
+.tittle-tabela{
+    font-family: "Lato", sans-serif;
+    font-weight: 750;
+    font-style: normal;
+    font-size: 35px;
+    padding-bottom: 20px;
+    text-align: center;
+}   
