@@ -109,13 +109,4 @@ If you have schema diagrams or SQL exports, place them under `docs/` and referen
 - Keep environment-specific settings outside source code (e.g., via environment variables).
 - Database initialization scripts should avoid destructive operations by default (e.g., avoid dropping all tables unless explicitly required).
 
----
-
-## Roadmap (suggested)
-
-- Add automated tests for core services (topic parsing, persistence, role access)
-- Add CI checks (lint + tests)
-- Standardize configuration management (environment variables)
-- Add short architectural diagrams under `docs/`
-- Improve documentation for payload formats and error handling
 
