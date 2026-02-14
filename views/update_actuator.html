@@ -1,0 +1,48 @@
+{% extends "base_login.html" %}
+{% block content %}
+
+    {%for actuator in actuator%}
+        <h1>Editar atuador</h1>
+        <form action = "http://localhost:8080/update_actuator" method = "post">
+            <div class=" total">
+                <p>Id:</p>
+                <div class = "caixa">
+                    <p><input type = "text" name = "id" value= "{{actuator.id}}" readonly/></p>
+                </div>
+                <p>Nome:</p>
+                <div class = "caixa">
+                    <p><input type = "text" name = "actuator" value= "{{actuator.name}}" required/></p>
+                </div>
+                <p>Marca:</p>
+                <div class = "caixa">
+                    <p><input type = "text" name = "brand" value='{{actuator.brand}}' required/></p>
+                </div>
+                <p>Modelo:</p>
+                <div class = "caixa">
+                    <p><input type = "text" name = "model" value='{{actuator.model}}' required/></p>
+                </div>
+                <p>Unidade de Medida:</p>
+                <div class = "caixa">
+                    <p><input type = "text" name = "unit" value='{{actuator.unit}}' required/></p>
+                </div>
+                <p>Tópico MQTT:</p>
+                <div class = "caixa">
+                    <p><input type = "text" name = "topic" value='{{actuator.topic}}' required/></p>
+                </div>
+                <p>Localização:</p>
+                <div class = "caixa">
+                    <p><input type = "text" name = "localizacao" value='{{actuator.localizacao}}' required/></p>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="is_active" name="is_active" checked />
+                    <label for="is_active">Ativo?</label>
+                </div>
+            </div>
+                
+            <div class="botao">
+                <p><input type="submit" value = "Alterar" class="botao" /></p>
+            </div>
+        </form>
+    {%endfor%}
+            
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends"base_adm.html" %}
+{% block content%}
+<div class="page">
+    {% if devices|length> 0 %}
+    <table id="view_users" class="table table-striped" style="width:100%">
+        <div class="tittle-tabela">Controle de usuários</div>
+        
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Função</th>
+                <th>Editar</th>
+                <th>Deletar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in devices %}
+                <tr>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.name }}</td>
+                    <td><a href="http://localhost:8080/edit_user?email={{user.email}}">Editar</a></td>
+                    <td><a href="http://localhost:8080/del_user?email={{user.email}}">Deletar</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form action= "http://localhost:8080/register_user">
+        <div class="botao">
+            <a><input type= "submit" value= "Adicionar Usuário"/></a>
+        </div>
+        </form>
+        {% else %}
+        <p>Ainda não há usuários registrados!<p>
+    <form action= "http://localhost:8080/register_user">
+    <div class="botao">
+        <p><input type= "submit" value= "Adicionar Usuário"/></p>
+    </div>
+    </form>
+{% endif %}
+
+{% endblock%}
+</div>

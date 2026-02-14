@@ -1,0 +1,58 @@
+{% extends"base_adm.html" %}
+{% block content%}
+<div class="page">
+    {% if devices|length> 0 %}
+    <table id="view_users" class="table table-striped" style="width:100%">
+        <div class="tittle-tabela">Controle de sensores</div>
+        
+        <thead>
+            <tr>
+                <th>Sensor</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Tópico</th>
+                <th>Unidade</th>
+                <th>Bairro</th>
+                <th>Status</th>
+                <th>Editar</th>
+                <th>Deletar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sensor in devices %}
+                <tr>
+                    <td>{{ sensor.name }}</td>
+                    <td>{{ sensor.brand }}</td>
+                    <td>{{ sensor.model }}</td>
+                    <td>{{ sensor.topic }}</td> 
+                    <td>{{ sensor.unit }}</td>
+                    <td>{{ sensor.localizacao }}</td>
+                    {% if sensor.is_active == true %}
+                        <td>Ativo</td>
+                    {% else %}
+                        <td>Desativado</td>
+                    {% endif %}
+                    <td><a href="http://localhost:8080/edit_sensor?id={{sensor.id}}">Editar</a></td>
+                    <td><a href="http://localhost:8080/del_sensor?id={{sensor.id}}">Deletar</a></td>
+
+                    
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form action= "http://localhost:8080/register_sensores">
+        <div class="botao">
+            <a><input type= "submit" value= "Adicionar Sensor"/></a>
+        </div>
+        </form>
+        {% else %}
+        <p>Ainda não há sensores registrados!<p>
+    <form action= "http://localhost:8080/register_sensores">
+    <div class="botao">
+        <p><input type= "submit" value= "Adicionar Sensor"/></p>
+    </div>
+    </form>
+    {% endif %}
+</div>
+
+{% endblock %}

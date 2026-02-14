@@ -1,0 +1,49 @@
+{% extends "base_login.html" %}
+{% block content %}
+
+    {%for sensor in sensor%}
+
+        <form action = "http://localhost:8080/update_sensor" method = "post">
+            <h1>Editar sensor</h1>
+            <div class="total">
+                <p>Id:</p>
+                <div class = "caixa">
+                <p><input type = "text" name = "id" value= "{{sensor.id}}" readonly/></p>
+                </div>
+                <p>Nome:</p>
+                <div class = "caixa">
+                <p><input type = "text" name = "sensor" value= "{{sensor.name}}" required/></p>
+                </div>
+                <p>Marca:</p>
+                <div class = "caixa">
+                <p><input type = "text" name = "brand" value='{{sensor.brand}}' required/></p>
+                </div>
+                <p>Modelo:</p>
+                <div class = "caixa">
+                <p><input type = "text" name = "model" value='{{sensor.model}}' required/></p>
+                </div>
+                <p>Unidade de Medida:</p>
+                <div class = "caixa">
+                <p><input type = "text" name = "unit" value='{{sensor.unit}}' required/></p>
+                </div>
+                <p>Tópico MQTT:</p>
+                <div class = "caixa">
+                <p><input type = "text" name = "topic" value='{{sensor.topic}}' required/></p>
+                </div>
+                <p>Localização:</p>
+                <div class = "caixa">
+                <p><input type = "text" name = "localizacao" value='{{sensor.localizacao}}' required/></p>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="is_active" name="is_active" checked />
+                    <label for="is_active">Ativo?</label>
+                </div>
+            </div>
+           
+            <div class="botao">
+                <p><input type="submit" value = "Alterar" class="botao" /></p>
+            </div>
+        </form>
+    {%endfor%}
+            
+{% endblock %}
